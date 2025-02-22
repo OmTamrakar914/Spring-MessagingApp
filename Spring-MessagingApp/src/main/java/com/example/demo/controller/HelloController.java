@@ -4,6 +4,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.model.User;
+
 @RestController
 @RequestMapping("/hello")
 public class HelloController {
@@ -25,6 +27,12 @@ public class HelloController {
     @GetMapping("/param/{name}")
     public String sayHelloParam(@PathVariable String name) {
     	return "Hello " + name + "!";
+    }
+    
+    //UseCase: 4
+    @PostMapping("/post")
+    public String sayHello(@RequestBody User user) {
+    	return "Hello " + user.getFirstName() + " " + user.getLastName()+ "!";
     }
     
     
