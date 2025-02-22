@@ -18,7 +18,7 @@ public class HelloController {
     }
     
     //UseCase: 2
-    @GetMapping("/query")
+    @RequestMapping("/query")
     public String printHelloQuery(@RequestParam String name) {
     	return "Hello " + name+ "!";
     }
@@ -35,7 +35,11 @@ public class HelloController {
     	return "Hello " + user.getFirstName() + " " + user.getLastName()+ "!";
     }
     
-    
+    //UseCase: 5
+    @PutMapping("/put/{firstName}")
+    public String SayHellobyboth(@PathVariable String firstName, @RequestParam String lastName) {
+    	return "Hello "+ firstName + " " + lastName + "!";
+    }
     
     
 }
