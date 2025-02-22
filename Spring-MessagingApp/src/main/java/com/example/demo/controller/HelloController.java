@@ -18,7 +18,7 @@ public class HelloController {
     //UseCase: 2
     @GetMapping("/query")
     public String printHelloQuery(@RequestParam String name) {
-    	return "Hello" + name;
+    	return "Hello " + name+ "!";
     }
     
     
