@@ -21,6 +21,11 @@ public class HelloController {
     	return "Hello " + name+ "!";
     }
     
+    //UseCase: 3
+    @GetMapping("/param/{name}")
+    public String sayHelloParam(@PathVariable String name) {
+    	return "Hello " + name + "!";
+    }
     
     
     
